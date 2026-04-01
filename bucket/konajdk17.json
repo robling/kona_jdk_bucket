@@ -1,0 +1,33 @@
+{
+    "version": "17.0.18",
+    "description": "Tencent Kona JDK 17 - Tencent's distribution of OpenJDK 17 with long-term support",
+    "homepage": "https://github.com/Tencent/TencentKona-17",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tencent/TencentKona-17/releases/download/TencentKona-17.0.18/TencentKona-17.0.18.b1_jdk_windows-x86_64_signed.zip",
+            "hash": "sha256:6c6254f327ce2812ff1ad67f81fc50701a40e741dfa833314a98c96485179405",
+            "extract_dir": "TencentKona-17.0.18.b1_jdk_windows-x86_64"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/Tencent/TencentKona-17",
+        "regex": "TencentKona-([\\d]+\\.[\\d]+\\.[\\d]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Tencent/TencentKona-17/releases/download/TencentKona-$version/TencentKona-$version.b1_jdk_windows-x86_64_signed.zip",
+                "hash": {
+                    "url": "$url.md5",
+                    "regex": "([a-fA-F0-9]{32})"
+                },
+                "extract_dir": "TencentKona-$version.b1_jdk_windows-x86_64"
+            }
+        }
+    }
+}

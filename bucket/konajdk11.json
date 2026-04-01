@@ -1,0 +1,33 @@
+{
+    "version": "11.0.30",
+    "description": "Tencent Kona JDK 11 - Tencent's distribution of OpenJDK 11 with long-term support",
+    "homepage": "https://github.com/Tencent/TencentKona-11",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tencent/TencentKona-11/releases/download/kona11.0.30/TencentKona-11.0.30.b1_jdk_windows-x86_64_signed.zip",
+            "hash": "sha256:26b136ba87539cca6f77a800d5849e819b1f4704e4c1b54e663f81b1bf016d31",
+            "extract_dir": "TencentKona-11.0.30.b1_jdk_windows-x86_64"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/Tencent/TencentKona-11",
+        "regex": "kona([\\d]+\\.[\\d]+\\.[\\d]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Tencent/TencentKona-11/releases/download/kona$version/TencentKona-$version.b1_jdk_windows-x86_64_signed.zip",
+                "hash": {
+                    "url": "$url.md5",
+                    "regex": "([a-fA-F0-9]{32})"
+                },
+                "extract_dir": "TencentKona-$version.b1_jdk_windows-x86_64"
+            }
+        }
+    }
+}

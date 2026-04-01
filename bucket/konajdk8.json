@@ -1,0 +1,24 @@
+{
+    "version": "8.0.25",
+    "description": "Tencent Kona JDK 8 - Tencent's distribution of OpenJDK 8 with long-term support",
+    "homepage": "https://github.com/Tencent/TencentKona-8",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tencent/TencentKona-8/releases/download/8.0.25-GA/TencentKona8.0.25.b1_jdk_windows-x86_64_8u482_signed.zip",
+            "hash": "sha256:97a897a7dde24b330a82403b2e9649c6f71dc373adc60aaf93d5b11c70c9e2e5",
+            "extract_dir": "TencentKona8.0.25.b1_jdk_windows-x86_64_8u482"
+        }
+    },
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/Tencent/TencentKona-8",
+        "regex": "([\\d]+\\.[\\d]+\\.[\\d]+)-GA"
+    },
+    "autoupdate": {
+        "note": "KonaJDK 8 filename includes OpenJDK minor version (e.g. 8u482) which cannot be derived from the release tag alone. Manual update required for now."
+    }
+}

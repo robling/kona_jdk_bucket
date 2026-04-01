@@ -17,8 +17,5 @@
     "checkver": {
         "github": "https://github.com/Tencent/TencentKona-8",
         "regex": "([\\d]+\\.[\\d]+\\.[\\d]+)-GA"
-    },
-    "autoupdate": {
-        "note": "KonaJDK 8 filename includes OpenJDK minor version (e.g. 8u482) which cannot be derived from the release tag alone. Manual update required for now."
     }
 }
